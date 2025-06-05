@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triton Repair - Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #ededed;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #111827;
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #00dfc4;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #ededed;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li:hover > a {
+            background: #00dfc4;
+            color: #0b0f19;
+            border-radius: 6px;
+        }
+
+        nav ul li ul.dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: #1f2937;
+            padding: 10px 0;
+            border-radius: 6px;
+        }
+
+        nav ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        nav ul li ul.dropdown li {
+            width: 200px;
+        }
+
+        nav ul li ul.dropdown li a {
+            display: block;
+            padding: 10px 20px;
+        }
+
+        .hero {
+            padding: 100px 40px;
+            text-align: center;
+            background: linear-gradient(to right, #0b0f19, #1f2937);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #00dfc4;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+         .cta-button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: #00d9ff;
+      color: #0b0f19;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #00b5d9;
+    }
+
+        .services {
+            padding: 80px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .service-box:hover {
+            background: #00dfc4;
+            color: #0b0f19;
+            transform: translateY(-10px);
+        }
+
+        .service-box h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            
+        }
+
+        .footer {
+            background: #111827;
+            padding: 40px;
+            text-align: center;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                background: #1f2937;
+                position: absolute;
+                top: 70px;
+                right: 40px;
+                width: 200px;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">TritonRepair</div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#">AC Repair</a></li>
+                        <li><a href="#">Heating</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Professional HVAC & Appliance Repair</h1>
+        <p>Your comfort is our priority. Fast, affordable, and expert service.</p>
+    <button class="cta-button">Book a Service</button>
+      </section>
+
+    <section class="services">
+        <div class="service-box">
+            <h3>AC Installation</h3>
+            <p>We provide efficient and affordable air conditioning installation.</p>
+        </div>
+        <div class="service-box">
+            <h3>Heating Systems</h3>
+            <p>Reliable heating repair and full system installations for all seasons.</p>
+        </div>
+        <div class="service-box">
+            <h3>Appliance Repair</h3>
+            <p>Fridge, oven, or washer – we fix it all with same-day service.</p>
+        </div>
+        <div class="service-box">
+            <h3>Maintenance</h3>
+            <p>Keep your systems running efficiently with regular expert checkups.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        &copy; 2025 TritonRepair. All Rights Reserved. | Designed by Md Ajij
+    </footer>
+</body>
+</html>
